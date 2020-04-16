@@ -38,6 +38,8 @@ def mostFrequentNGram(text, n):
         for char_index in range(0, len(text) - n + 1):
             if nGram_dict.get(text[char_index:char_index + n]) is None:
                 nGram_dict[text[char_index:char_index + n]] = 1
+                ngram = text[char_index:char_index + n]
+                max = 1
             else:
                 nGram_dict[text[char_index:char_index + n]] += 1
                 if nGram_dict[text[char_index:char_index + n]] > max:
