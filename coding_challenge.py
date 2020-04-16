@@ -22,7 +22,6 @@ def calculateNGrams(text, n):
 # functions of getting and setting values on the dictionary have a time complexity of O(1) on the best cases.
 # On the worst case, the algorithm has a time complexity of O(knˆ2) - O(nkˆ2). Both complexities taking into account
 def mostFrequentNGram(text, n):
-    # frequent = ''
     nGram_dict = {}
 
     max = -1
@@ -40,9 +39,6 @@ def mostFrequentNGram(text, n):
                     max = nGram_dict[text[char_index:char_index + n]]
                     ngram = text[char_index:char_index + n]
 
-        # frequent = max(nGram_dict.items(), key=operator.itemgetter(1))[0]
-
     return ngram
 
-print(mostFrequentNGram("to be or not to be", 2))
 
