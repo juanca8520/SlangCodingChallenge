@@ -1,4 +1,5 @@
-import operator
+# Juan Camilo Pulido Gil
+# juank_pg1998@hotmail.com
 
 # This function calculates the NGram of a given string.
 # The time complexity of this algorithm is O(k(n - k)) where n is the length of the String and k the length of
@@ -11,6 +12,8 @@ import operator
 def calculateNGrams(text, n):
     nGrams = []
     if n == len(text):
+        nGrams.append(text)
+    elif n > len(text):
         nGrams.append(text)
     else:
         for char_index in range(0, len(text) - n + 1):
@@ -28,7 +31,9 @@ def mostFrequentNGram(text, n):
     ngram = ''
 
     if n == len(text):
-        max = text
+        ngram = text
+    elif n > len(text):
+        ngram = text
     else:
         for char_index in range(0, len(text) - n + 1):
             if nGram_dict.get(text[char_index:char_index + n]) is None:
@@ -40,5 +45,3 @@ def mostFrequentNGram(text, n):
                     ngram = text[char_index:char_index + n]
 
     return ngram
-
-
