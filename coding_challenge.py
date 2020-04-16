@@ -18,9 +18,9 @@ def calculateNGrams(text, n):
     return nGrams
 
 # This function calculates the most common NGram of a given string.
-# The time complexity of this algorithm is O(knˆ2 - nkˆ2) taking into consideration that Python's native dictionary
+# The time complexity of this algorithm is O(k(n - k)) taking into consideration that Python's native dictionary
 # functions of getting and setting values on the dictionary have a time complexity of O(1) on the best cases.
-# On the worst case, the algorithm has a time complexity of O(knˆ3) - O(nˆ2kˆ2). Both complexities taking into account
+# On the worst case, the algorithm has a time complexity of O(knˆ2) - O(nkˆ2). Both complexities taking into account
 def mostFrequentNGram(text, n):
     # frequent = ''
     nGram_dict = {}
